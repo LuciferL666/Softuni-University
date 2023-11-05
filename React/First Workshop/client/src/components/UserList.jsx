@@ -6,6 +6,9 @@ const UserList = () => {
             <Search />
 
             <UserListTable />
+
+            <button className="btn-add btn">Add new user</button>
+            
       </section>
     );
 };
