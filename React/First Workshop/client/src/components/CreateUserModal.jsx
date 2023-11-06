@@ -1,6 +1,6 @@
 const CreateUserModal = ({
     onClose,
-    onUserCreate,
+    onCreate,
 }) => {
 
     return (

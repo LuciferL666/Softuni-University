@@ -5,10 +5,14 @@ import * as userService from "../services/userService";
 
 import UserListItem from "./UserListItem";
 import CreateUserModal from "./CreateUserModal";
+import UserInfoModal from "./UserInfoModal";
 
 const UserListTable = () => {
   const [users, setUsers] = useState([]);
   const [showCreate, setShowCreate] = useState(false)
+  const [showInfo, setShowInfo] = useState(false);
+  const [selectedUser, setSelectedUser] = useState(null)
+
   useEffect(() => {
     userService.getAll()
     .then(result => setUsers(result))
@@ -37,16 +41,27 @@ const UserListTable = () => {
     // Close the modal
     setShowCreate(false);
   };
+
+  const userInfoClickHandler = async (userId) => {
+      setSelectedUser(userId);
+      setShowInfo(true)
+  }
+
     return (
         <div className="table-wrapper">
           {showCreate && (
           <CreateUserModal 
           onClose={hideCreateUserModal} 
-          onUserCreate={userCreateHandler}
+          onCreate={userCreateHandler}
           />
           )}  
 
-          {showInfo &&  <UserInfoModal onClose={}/>}
+          {showInfo &&
+            <UserInfoModal
+             onClose={() => setShowInfo(false)}
+            userId={selectedUser} 
+            />
+            }
         <table className="table">
           <thead>
             <tr>
@@ -107,12 +122,14 @@ const UserListTable = () => {
               <UserListItem 
                   // {...user} can be like this or
                   key={user._id}
+                  userId={user._id}
                   firstName={user.firstName}
                   lastName={user.lastName}
                   email={user.email}
                   imageUrl={user.imageUrl}
                   createdAt={user.createdAt}
                   phoneNumber={user.phoneNumber}
+                  onInfoClick={userInfoClickHandler}
               />
             ))}
           </tbody>

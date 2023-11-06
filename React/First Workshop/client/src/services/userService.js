@@ -9,7 +9,14 @@ export const getAll = async () => {
 
         return users;
 
-};
+}; 
+
+export const getOne = async (userId) => {
+    const response = await fetch (`${baseUrl}/${userId}`);
+    const result = await response.json();
+
+    return result;
+}
 
 export const create = async (data) => {
     const body = {
