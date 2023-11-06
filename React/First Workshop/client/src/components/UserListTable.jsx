@@ -8,12 +8,15 @@ import UserListItem from "./UserListItem";
 const UserListTable = () => {
   const [users, setUsers] = useState([]);
 
-  console.log(users);
 
   useEffect(() => {
     userService.getAll()
     .then(result => setUsers(result));
   }, [])
+
+  const createUserClickHandler = () => {
+    console.log('create user');
+  }
 
     return (
         <div className="table-wrapper">
@@ -73,10 +76,23 @@ const UserListTable = () => {
             </tr>
           </thead>
           <tbody>
-            {/* <!-- Table row component --> */}
-              <UserListItem />
+            {users.map(user => (
+              <UserListItem 
+                  // {...user} can be like this or
+                  key={user._id}
+                  firstName={user.firstName}
+                  lastName={user.lastName}
+                  email={user.email}
+                  imageUrl={user.imageUrl}
+                  createdAt={user.createdAt}
+                  phoneNumber={user.phoneNumber}
+              />
+            ))}
           </tbody>
         </table>
+
+        <button className="btn-add btn" onClick={createUserClickHandler}>Add new user</button>
+
       </div>
     )
 };
