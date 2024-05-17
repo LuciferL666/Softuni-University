@@ -3,6 +3,6 @@ function solve (input){
     console.log(result);
     console.log(input); 
 }
-solve('Hello, JavaScript!')
+solve('Hello, JavaScript!');
 
 

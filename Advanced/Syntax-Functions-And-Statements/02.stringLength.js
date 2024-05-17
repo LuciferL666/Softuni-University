@@ -4,4 +4,4 @@ function length (one, two, three){
     console.log(total);
     console.log(avg);
 }
-length('chocolate', 'ice cream', 'cake')
+length('chocolate', 'ice cream', 'cake');
