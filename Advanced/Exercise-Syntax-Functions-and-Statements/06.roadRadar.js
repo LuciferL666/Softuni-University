@@ -8,10 +8,10 @@ function radar (speed, area){
         if(speed - limit <= 0){
             console.log(`Driving ${speed} km/h in a ${limit} zone`);
         }else if(speed - limit <= 20){
-            status = "speeding"
+            status = "speeding";
             console.log(`The speed is ${speed - limit} km/h faster than the allowed speed of ${limit} - ${status}`);
         }else if(speed - limit <= 40){
-            status = "excessive speeding"
+            status = "excessive speeding";
             console.log(`The speed is ${speed - limit} km/h faster than the allowed speed of ${limit} - ${status}`);
         }else {
             status = "reckless driving";
@@ -22,10 +22,10 @@ function radar (speed, area){
         if(speed - limit <= 0){
             console.log(`Driving ${speed} km/h in a ${limit} zone`);
         }else if(speed - limit <= 20){
-            status = "speeding"
+            status = "speeding";
             console.log(`The speed is ${speed - limit} km/h faster than the allowed speed of ${limit} - ${status}`);
         }else if(speed - limit <= 40){
-            status = "excessive speeding"
+            status = "excessive speeding";
             console.log(`The speed is ${speed - limit} km/h faster than the allowed speed of ${limit} - ${status}`);
         }else {
             status = "reckless driving";
@@ -36,10 +36,10 @@ function radar (speed, area){
         if(speed - limit <= 0){
             console.log(`Driving ${speed} km/h in a ${limit} zone`);
         }else if(speed - limit <= 20){
-            status = "speeding"
+            status = "speeding";
             console.log(`The speed is ${speed - limit} km/h faster than the allowed speed of ${limit} - ${status}`);
         }else if(speed - limit <= 40){
-            status = "excessive speeding"
+            status = "excessive speeding";
             console.log(`The speed is ${speed - limit} km/h faster than the allowed speed of ${limit} - ${status}`);
         }else {
             status = "reckless driving";
@@ -50,10 +50,10 @@ function radar (speed, area){
         if(speed - limit <= 0){
             console.log(`Driving ${speed} km/h in a ${limit} zone`);
         }else if(speed - limit <= 20){
-            status = "speeding"
+            status = "speeding";
             console.log(`The speed is ${speed - limit} km/h faster than the allowed speed of ${limit} - ${status}`);
         }else if(speed - limit <= 40){
-            status = "excessive speeding"
+            status = "excessive speeding";
             console.log(`The speed is ${speed - limit} km/h faster than the allowed speed of ${limit} - ${status}`);
         }else {
             status = "reckless driving";
