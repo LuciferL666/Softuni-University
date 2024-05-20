@@ -5,4 +5,4 @@
             console.log(a);
         }
     }
-    gcd(15, 5)
+    gcd(15, 5);
