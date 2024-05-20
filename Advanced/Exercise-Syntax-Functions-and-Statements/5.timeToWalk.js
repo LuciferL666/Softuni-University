@@ -1,12 +1,12 @@
 function waking (steps, footprint, speed) {
-    let distance = steps * footprint
-    let speedMeterSeconds = speed / 3.6
-    let time = distance / speedMeterSeconds
-    let rest = Math.floor(distance / 500)
+    let distance = steps * footprint;
+    let speedMeterSeconds = speed / 3.6;
+    let time = distance / speedMeterSeconds;
+    let rest = Math.floor(distance / 500);
 
-    let timeHours = Math.floor(time / 3600)
-    let timeMin = Math.floor(time / 60)
-    let timeSecounds = Math.round(time - timeMin * 60)
+    let timeHours = Math.floor(time / 3600);
+    let timeMin = Math.floor(time / 60);
+    let timeSecounds = Math.round(time - timeMin * 60);
 
     console.log(
         (timeHours < 10 ? "0" : "") +
