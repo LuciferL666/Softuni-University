@@ -2,7 +2,7 @@ function printEveryNthElement(arr, step){
     result = [];
 
     for(let i = 0; i< arr.length; i+= step){
-        result.push(arr[i])
+        result.push(arr[i]);
     }
     console.log(result);
     // return result
