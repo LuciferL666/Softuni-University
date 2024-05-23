@@ -2,9 +2,9 @@ function printEveryNthElement(arr, step){
     console.log(arr.filter((el, i) => {
         if(i % step === 0){
             return el
-        }
-    }))
-}
+        };
+    }));
+};
 
 printEveryNthElement(
     ['5',
