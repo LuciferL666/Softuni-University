@@ -3,11 +3,11 @@ function addAndRemoveElements(commands) {
     let num = 1;
     for (const command of commands) {
         if(command == 'add'){
-            result.push(num)
-            num++
+            result.push(num);
+            num++;
         }else if (command == 'remove'){
             result.pop();
-            num++
+            num++;
         }
     }
     if(result.length === 0){
@@ -21,16 +21,16 @@ addAndRemoveElements([
 'add',
 'add',
 'add',
-'add'])
+'add']);
 console.log('-------------');
 addAndRemoveElements([
 'add', 
 'add', 
 'remove', 
 'add', 
-'add'])
+'add']);
 console.log('-------------');
 addAndRemoveElements([
 'remove', 
 'remove', 
-'remove'])
+'remove']);
