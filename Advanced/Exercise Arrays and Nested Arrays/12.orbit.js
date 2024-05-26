@@ -7,7 +7,7 @@ function orbit(input){
     let matrix = [];
 
     for(let i = 0; i < rows; i++){
-        matrix[i] = []
+        matrix[i] = [];
     }
 
     for(let row = 0; row < rows; row++){
@@ -19,6 +19,6 @@ function orbit(input){
     matrix.forEach(row => console.log(row.join(" ")));
 }
 
-orbit([4, 4, 0, 0])
-orbit([5, 5, 2, 2])
-orbit([3, 3, 2, 2])
+orbit([4, 4, 0, 0]);
+orbit([5, 5, 2, 2]);
+orbit([3, 3, 2, 2]);
