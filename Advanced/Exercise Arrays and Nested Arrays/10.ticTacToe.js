@@ -22,26 +22,26 @@ function ticTacToe(input) {
             ){
                 console.log(`Player ${marker} wins!`);
                 initDashboard.forEach(row => console.log(row.join("\t")));
-                return
+                return;
             } else if (initDashboard[0][i] === marker && //по колона
                        initDashboard[1][i] === marker &&
                        initDashboard[2][i] === marker
             ){
                 console.log(`Player ${marker} wins!`); //диагонал
                 initDashboard.forEach(row => console.log(row.join("\t")));
-                return
+                return;
             } else if (initDashboard[0][0] === marker &&
                        initDashboard[1][1] === marker &&
                        initDashboard[2][2] === marker){
                 console.log(`Player ${marker} wins!`);
                 initDashboard.forEach(row => console.log(row.join("\t")));
-                return
+                return;
             } else if (initDashboard [0][2] === marker && //диагонал
                        initDashboard [1][1] === marker &&
                        initDashboard [2][0] === marker){
                 console.log(`Player ${marker} wins!`);
                 initDashboard.forEach(row => console.log(row.join("\t")));
-                return
+                return;
             }
         }
             let isFreeSpace = false;
@@ -61,7 +61,7 @@ function ticTacToe(input) {
             initDashboard.forEach(row => console.log(row.join("\t")));
             break;
         }
-           isFirstPlayer = !isFirstPlayer
+           isFirstPlayer = !isFirstPlayer;
     }
 }
 
@@ -75,4 +75,4 @@ ticTacToe(
 "1 2",
 "2 2",
 "2 1",
-"0 0"])
+"0 0"]);
