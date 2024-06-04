@@ -1,10 +1,10 @@
 function rectangle(width, height, color){
-    result = {
+    let result = {
         width,
         height,
-        color: color[0].toUpperCase() + color.substring(1),
-        calcArea: function(){
-            return this.width * this.height 
+        color: color[0].toUpperCase() + color.substring(1), // събстринг слепва първата буква към останалите
+        calcArea: function (){
+            return this.width * this.height
         }
     }
     return result
