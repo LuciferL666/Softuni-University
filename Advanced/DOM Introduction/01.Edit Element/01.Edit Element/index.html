@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+<body>
+    <ul>
+        <li>DOM Test one</li>
+        <li>DOM Test TWO Test</li>
+    </ul>
+    <input>
+    <script>
+        function edit(ref, match, replacer) {
+    const pattern = new RegExp(match, 'g');
+    const text = ref.textContent;
+    const result = text.replace(pattern, replacer);
+
+    ref.textContent = result
+}
+    </script>
+</body>
+</html>
