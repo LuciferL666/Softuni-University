@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movies</h1>
+
+    <ul id="movie-list">
+        <li>1. Lord Of The Rings</li>
+        <li>2. Hobbit</li>
+        <li>3. Star Wars</li>
+        <li>4. Harry Potter</li>
+        <li>5. 2012</li>
+    </ul>
+
+    <script>
+        let movieElements = document.querySelectorAll('#movie-list li');
+
+        // movieElements.forEach(el => {
+        //     el.onclick = () => {
+        //         if (el.style.textDecoration === 'line-through') {
+        //         el.style.textDecoration = '';  // Връщаме в нормално състояние
+        //     } else {
+        //         el.style.textDecoration = 'line-through';  // Зачертаваме текста
+        //     }
+        //     }
+        // })
+
+        movieElements.forEach(el => {
+            el.addEventListener('click', (e) => {
+                console.log(e.currentTarget.textContent); // да изкарам конкретния елемент и да видя кой е
+                if (el.style.textDecoration === 'line-through') {
+                el.style.textDecoration = '';  // Връщаме в нормално състояние
+            } else {
+                el.style.textDecoration = 'line-through';  // Зачертаваме текста
+            }
+            })
+        })
+    
+    </script>
+</body>
+</html>
