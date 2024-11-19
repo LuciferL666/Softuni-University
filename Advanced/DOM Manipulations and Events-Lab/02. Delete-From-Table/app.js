@@ -36,3 +36,36 @@ function deleteByEmail() {
 //     }
 //     document.getElementById('result').textContent = 'Not found.';
 // }
+
+
+// function deleteByEmail() {
+//     let emailElement = document.querySelector('input[name="email"]');
+//     let emailCellElements = document.querySelectorAll('tr td:nth-of-type(2)');
+//     let found = false;
+
+//     for (const tdElement of emailCellElements) {
+//         if (tdElement.textContent === emailElement.value) {
+//             tdElement.parentElement.remove(); // Премахва целия ред (родителският елемент на td е tr)
+//             found = true;
+//         }
+//     }
+
+//     let resultElement = document.getElementById('result');
+//     if (found) {
+//         resultElement.textContent = 'Deleted.';
+//     } else {
+//         resultElement.textContent = 'Not found.';
+//     }
+// }
+
+
+// function deleteByEmail() {
+//     let emailInputElement = document.querySelector('input[name="email"]');
+//     let emailCellElements = document.querySelectorAll('tr td:nth-of-type(2)');
+
+//     let emailElement = Array.from(emailCellElements);
+//     let targetElement = emailElement.find(x => x.textContent == emailInputElement.value);
+
+//     targetElement.parentNode.remove()
+
+// }
