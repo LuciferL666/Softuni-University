@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom Events | Movie List</h1>
+
+    <ul id="movie-list">
+        <li id="hardcoded-movie">The Matrix</li>
+    </ul>
+
+    <input type="text" name="title" />
+    <button onclick="onAddClick(event)">Add</button>
+
+    <script>
+               // Добавяне на слушател за събития към хардкоднатия елемент
+               document.getElementById('hardcoded-movie').addEventListener('click', function () {
+            toggleTextDecoration(this);
+        });
+
+        function onAddClick(event) {
+            let movieInputElement = document.querySelector('input[name="title"]');
+            let movieListElement = document.getElementById('movie-list');
+
+            let movieLiElement = document.createElement('li');
+            movieLiElement.textContent = movieInputElement.value;
+
+            movieInputElement.value = ''
+
+            movieListElement.appendChild(movieLiElement);
+
+            // Добавяме слушател за събитие и на новия елемент
+            movieLiElement.addEventListener('click', function () {
+                toggleTextDecoration(this);
+            });
+        }
+
+        // Функция за зачертаване или отзачертаване на текста
+        function toggleTextDecoration(element) {
+            if (element.style.textDecoration === 'line-through') {
+                element.style.textDecoration = '';  // Връщаме в нормално състояние
+            } else {
+                element.style.textDecoration = 'line-through';  // Зачертаваме текста
+            }
+        }
+    </script>
+</body>
+</html>
